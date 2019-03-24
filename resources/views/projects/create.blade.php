@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Create a new Project</title>
-</head>
-<body>
+@extends('layouts.app')
 
+
+@section('content')
     <form method="POST" action="/projects" class="container" style="padding-top: 40px;">
         @csrf
         <h1 class="heading is-1">Create a Project</h1>
@@ -27,8 +20,12 @@
         <div class="field">
             <div class="control">
                 <button type="submit" class="button is-link">Create Project</button>
+                <a href="/projects">Cancel</a>
             </div>
         </div>
     </form>
-</body>
-</html>
+@endsection
+
+
+
+
